@@ -85,8 +85,9 @@ OPTION(XTENSOR_USE_FLENS_BLAS "use FLENS generic implementation instead of cblas
 # would be enough to detect OpenBLAS.
 # If that is not the case, one can pass OpenBLAS_DIR without the boolean
 # toggle.
-OPTION(USE_OPENBLAS "use OpenBLAS (requires suitable OpenBLASConfig.cmake)" OFF)
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+OPTION(USE_OPENBLAS "use OpenBLAS (requires suitable OpenBLASConfig.cmake)" ON)
+
 if(OpenBLAS_DIR)
   set(USE_OPENBLAS ON)
 endif()
